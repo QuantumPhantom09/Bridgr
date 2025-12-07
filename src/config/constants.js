@@ -1,2 +1,2 @@
 // Replace localhost with your machine's local IP
-export const API_URL = 'http://YOUR_LOCAL_IP:3000';
+export const API_URL = 'https://probable-spoon-7v7xv9r749vx2jg5-3000.app.github.dev/';

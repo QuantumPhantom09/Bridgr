@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button, TouchableOpacity } from 'react-native';
-import { Camera } from 'expo-camera';
+import * as Camera from 'expo-camera';
 import { colors } from '../config/theme';
 
 export default function ScanScreen({ navigation }) {
@@ -32,10 +32,9 @@ export default function ScanScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Camera 
-        onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
-        style={StyleSheet.absoluteFillObject}
-      />
+      <Camera.Camera
+    onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+    style={StyleSheet.absoluteFillObject}/>
       <View style={styles.overlay}>
         <View style={styles.scanBox} />
         <Text style={styles.text}>Scan Merchant QR</Text>
